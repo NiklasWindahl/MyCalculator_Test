@@ -10,6 +10,12 @@ public class MyCalculator {
   Scanner op = new Scanner (System.in);
   Scanner input = new Scanner(System.in);
 
+public double getFirstNumber(){
+  return num1;
+}
+public double getSecondNumber(){
+  return num2;
+}
 
   private  void printInstructions(){
     try{
@@ -42,24 +48,17 @@ public class MyCalculator {
              System.out.println("Your Answer is "+(num1 / num2));
          }
 
-
-
- }
-
-catch (Exception e){
+ }     catch (Exception e){
   System.out.println("Error has occured, you messed up!");}
 
-
-  }
-  public double getFirstNumber(){
-    return num1;
-
 }
-public static void main(String[] args) {
+
+    public static void main(String[] args) {
 
     Scanner scan = new Scanner(System.in);
     MyCalculator myC = new MyCalculator();
     myC.printInstructions();
 
   }
+
 }
