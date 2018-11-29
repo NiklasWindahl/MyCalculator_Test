@@ -14,11 +14,53 @@ public class MyCalculator_Test {
     }
     return false;
   }
+
+  private static boolean test_StartValueOfSecondNumber(){
+    double temp = calc.getSecondNumber();
+    if (0 == temp){
+      return true;
+    }
+    return false;
+  }
+
+  private static boolean test_StartValueOfOperation(){
+    String temp = calc.getOperation();
+    if ("-1" == temp){
+      return true;
+    }
+    return false;
+  }
+
+  private static boolean test_StartValueOfAnswer(){
+    double temp = calc.getAnswer();
+    if (0 == temp){
+      return true;
+    }
+    return false;
+  }
+
   public static void main(String[] args) {
-    if(test_StartValueOfFirstNumber());{
+    if(test_StartValueOfFirstNumber()){
       System.out.println("test_StartValueOfFirstNumber " + ANSI_GREEN + "PASSED"+ ANSI_RESET);
-      }
+    }else{
       System.out.println("test_StartValueOfFirstNumber " + ANSI_RED + "FAILED"+ ANSI_RESET);
     }
 
+    if(test_StartValueOfSecondNumber()){
+      System.out.println("test_StartValueOfSecondNumber " + ANSI_GREEN + "PASSED"+ ANSI_RESET);
+    }else{
+      System.out.println("test_StartValueOfSecondNumber " + ANSI_RED + "FAILED"+ ANSI_RESET);
+    }
+
+    if(test_StartValueOfOperation()){
+      System.out.println("test_StartValueOfOperation " + ANSI_GREEN + "PASSED"+ ANSI_RESET);
+    }else{
+      System.out.println("test_StartValueOfOperation " + ANSI_RED + "FAILED"+ ANSI_RESET);
+    }
+    if(test_StartValueOfAnswer()){
+      System.out.println("test_StartValueOfAnswer " + ANSI_GREEN + "PASSED"+ ANSI_RESET);
+    }else{
+      System.out.println("test_StartValueOfAnswer " + ANSI_RED + "FAILED"+ ANSI_RESET);
+    }
+  }
 }
