@@ -16,6 +16,13 @@ public double getFirstNumber(){
 public double getSecondNumber(){
   return num2;
 }
+public String getOperation(){
+  return operation;
+}
+public double getAnswer(){
+  return answer;
+}
+
 
   private  void printInstructions(){
     try{
