@@ -10,6 +10,11 @@ public class MyCalculator {
   Scanner op = new Scanner (System.in);
   Scanner input = new Scanner(System.in);
 
+//konstruktor som ger nya instanser av MyCalculator startvärde från reset
+public MyCalculator(){
+  reset();
+}
+
 public double getFirstNumber(){
   return num1;
 }
@@ -21,6 +26,17 @@ public String getOperation(){
 }
 public double getAnswer(){
   return answer;
+}
+public void callAdd(double num1, double num2){
+  add(num1, num2);
+  return answer;
+}
+
+public static void reset();{
+  num1        = 0;
+  num2        = 0;
+  answer      = 0;
+  operation = "-1";
 }
 
 
@@ -38,6 +54,7 @@ public double getAnswer(){
       System.out.print("Välj: +  -  *  / ");
       operation = op.next();
 
+// Skapa en funktion för varje operation som vi sen kan testa
       if (operation.equals("+"))
          {
              System.out.println("Your Answer is "+(num1 + num2));
